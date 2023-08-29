@@ -154,38 +154,49 @@ p {
 
 /* HOME */
 #home {
-  background: url('../imgs/background.png') center/cover no-repeat;
-  padding: 40px;
-  padding-top: 120px;
+  background: var(--color-primary);
+  color: var(--color-text);
+  padding: 5rem 1rem;
+  padding-top: 7rem;
   text-align: center;
 }
 
 .home__avatar {
   width: 250px;
   height: 250px;
-  border-radius: 50%;
-  border: 2px solid var(--color-light-white);
+  object-fit: cover;
+  border-radius: 100%;
+  border: 2px solid var(--color-accent);
 }
 
-.home__title,
+.home__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home__title--strong {
+  color: var(--color-accent);
+}
+
 .home__descrioption {
-  color: var(--color-dark-yellow);
+  font-size: 1.3rem;
 }
 
 .home__contact {
-  color: var(--color-dark-yellow);
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  margin: 24px;
-  padding: 8px 12px;
-  border: 2px solid var(--color-dark-yellow);
-  border-radius: var(--size-boder-radius);
+  display: inline-block;
+  background-color: var(--color-accent);
+  padding: 0.5rem 1rem;
+  margin: 2rem;
+  font-weight: bold;
+  color: var(--color-black);
+  border-radius: 4px;
 }
 
 .home__contact:hover {
   transform: scale(1.1);
-  background-color: var(--color-dark-yellow);
-  color: var(--color-dark-blue);
+  background-color: transparent;
+  outline: 2px solid var(--color-accent);
+  color: var(--color-accent);
   transition: all var(--animation-duration) ease;
 }
 
