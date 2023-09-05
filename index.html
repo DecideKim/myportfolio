@@ -36,7 +36,9 @@
     <link rel="stylesheet" href="CSS/style.css" />
 
     <!-- Javascript -->
-    <script src="JS/main.js" defer></script>
+    <script type="module" src="JS/main.js" defer></script>
+    <script type="module" src="JS/projects.js" defer></script>
+    <script type="module" src="JS/active_menu.js" defer></script>
   </head>
 
   <body>
@@ -53,21 +55,24 @@
         <h1 class="header__logo__title">JUNGHOE</h1>
       </div>
       <nav class="header__nav">
-        <ul class="haeder__menu">
-          <li><a class="haeder__menu__item active" href="#home">Home</a></li>
-          <li><a class="haeder__menu__item" href="#about">About</a></li>
-          <li><a class="haeder__menu__item" href="#skills">Skills</a></li>
-          <li><a class="haeder__menu__item" href="#work">Work</a></li>
-          <li><a class="haeder__menu__item" href="#contact">Contact</a></li>
+        <ul class="header__menu">
+          <li><a class="header__menu__item active" href="#home">Home</a></li>
+          <li><a class="header__menu__item" href="#about">About</a></li>
+          <li><a class="header__menu__item" href="#skills">Skills</a></li>
+          <li><a class="header__menu__item" href="#work">Work</a></li>
+          <li><a class="header__menu__item" href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <button class="header__toggle" aria-label="navigation menu toggle button">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </header>
 
     <!-- Main -->
     <main>
       <!-- Home -->
       <section id="home">
-        <div>
+        <div class="home__container">
           <img
             src="imgs/profile.png"
             alt="Hector`s profile photo"
@@ -204,23 +209,23 @@
           <p class="description">Projects</p>
           <ul class="categories">
             <li>
-              <button class="category category--selected">
+              <button class="category category--selected" data-category="all">
                 All <span class="category__count">3</span>
               </button>
             </li>
             <li>
-              <button class="category">
+              <button class="category" data-category="Front-end">
                 Front-end <span class="category__count">2</span>
               </button>
             </li>
             <li>
-              <button class="category">
+              <button class="category" data-category="Back-end">
                 Back-end <span class="category__count">1</span>
               </button>
             </li>
           </ul>
           <ul class="projects">
-            <li class="project">
+            <li class="project" data-type="Front-end">
               <a href="#" target="_blank">
                 <img
                   src="imgs/projects/front1.webp"
@@ -233,7 +238,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="Front-end">
               <a href="#" target="_blank">
                 <img
                   src="imgs/projects/front2.webp"
@@ -246,7 +251,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="Back-end">
               <a href="#" target="_blank">
                 <img
                   src="imgs/projects/back1.webp"
