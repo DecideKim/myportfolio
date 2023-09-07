@@ -10,7 +10,7 @@
       content="Portfolio for software engineer JungHoe"
     />
     <meta name="author" content="JungHoe" />
-    <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon1.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico" />
 
     <!-- OG (Open Graph Data) -->
     <meta property="og:title" content="정회의 포트폴리오" />
@@ -30,6 +30,9 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,6 +48,7 @@
     <script type="module" src="JS/main.js" defer></script>
     <script type="module" src="JS/projects.js" defer></script>
     <script type="module" src="JS/active_menu.js" defer></script>
+    <script type="module" src="JS/type.js" defer></script>
   </head>
 
   <body>
@@ -55,7 +59,7 @@
         <img
           class="header__logo__img"
           type="image/png"
-          src="imgs/sheep.png"
+          src="imgs/profile-modified.png"
           alt="logo"
         />
         <h1 class="header__logo__title">JUNGHOE</h1>
@@ -77,16 +81,17 @@
     <!-- Main -->
     <main>
       <!-- Home -->
-      <section id="home">
+      <section id="home" class="section">
+        <div class="home__bg-dark" title="home background color"></div>
         <div class="home__container">
-          <img
-            src="imgs/profile.webp"
+          <!-- <img
+            src="imgs/background.webp"
             alt="Hector`s profile photo"
             class="home__avatar"
-          />
-          <h2 class="home__title">
+          /> -->
+          <h2 class="home__title" aria-label="Hello, I'm Awesome Coder JungHoe">
             Hello <br />
-            I&#39;m <strong class="home__title--strong">Awesome Coder</strong>,
+            I&#39;m <strong class="home__title--strong">&nbsp;Coder</strong>,
             JungHoe
           </h2>
           <p class="home__descrioption">
@@ -97,42 +102,45 @@
       </section>
 
       <!-- About -->
-      <section id="about" class="section max-container">
-        <h1 class="title">About me</h1>
-        <p class="description">
-          I wanted to be a fullstack developer, so I studied front-end and
-          back-end and I can handle the following techniques.
-        </p>
-        <ul class="majors">
-          <li class="major">
-            <i class="fa-brands fa-html5 major__icon"></i>
-            <p class="major__title">Front-end</p>
-            <p class="major__description">HTML, CSS, JavaScript, React</p>
-          </li>
-          <li class="major">
-            <i class="fa-solid fa-server major__icon"></i>
-            <h2 class="major__title">Back-end</h2>
-            <p class="major__description">Java, JavaScript, Spring, Oracle</p>
-          </li>
-        </ul>
+      <section id="about" class="section">
+        <div class="max-container">
+          <h1 class="title">About me</h1>
+          <p class="description">
+            I wanted to be a fullstack developer, <br />
+            so I studied front-end and back-end and I can handle the following
+            techniques.
+          </p>
+          <ul class="majors">
+            <li class="major">
+              <i class="fa-brands fa-html5 major__icon"></i>
+              <p class="major__title">Front-end</p>
+              <p class="major__description">HTML, CSS, JavaScript, React</p>
+            </li>
+            <li class="major">
+              <i class="fa-solid fa-server major__icon"></i>
+              <h2 class="major__title">Back-end</h2>
+              <p class="major__description">Java, JavaScript, Spring, Oracle</p>
+            </li>
+          </ul>
 
-        <ul class="jobs">
-          <li class="job">
-            <img src="imgs/jobs/itwill.webp" alt="itwill" class="job__logo" />
-            <div class="job__description">
-              <p class="job__name">ITwil Web Development Training Project</p>
-              <p class="job__period">2022 Dec - 2023 Jun</p>
-            </div>
-          </li>
-        </ul>
+          <ul class="jobs">
+            <li class="job">
+              <img src="imgs/jobs/itwill.webp" alt="itwill" class="job__logo" />
+              <div class="job__description">
+                <p class="job__name">ITwil Web Development Training Project</p>
+                <p class="job__period">2022 Dec - 2023 Jun</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Skills -->
       <section id="skills" class="section">
         <div class="max-container">
-          <h2 class="Skill__title">My Skills</h2>
-          <p class="Skill__description">Skills & Atributes</p>
-          <p class="Skill__description">
+          <h2 class="title">My Skills</h2>
+          <p class="description">Skills & Atributes</p>
+          <p class="description">
             I wrote my techniques in a graph as follows.
           </p>
           <div class="skills">
@@ -232,7 +240,7 @@
           </ul>
           <ul class="projects">
             <li class="project" data-type="Front-end">
-              <a href="#" target="_blank">
+              <a href="https://github.com/DecideKim/youtube" target="_blank">
                 <img
                   src="imgs/projects/front1.webp"
                   alt="project1"
@@ -245,7 +253,10 @@
               </a>
             </li>
             <li class="project" data-type="Front-end">
-              <a href="#" target="_blank">
+              <a
+                href="https://frabjous-jelly-c537bb.netlify.app/"
+                target="_blank"
+              >
                 <img
                   src="imgs/projects/front2.webp"
                   alt="project2"
@@ -258,7 +269,10 @@
               </a>
             </li>
             <li class="project" data-type="Back-end">
-              <a href="#" target="_blank">
+              <a
+                href="https://funny-outrigger-db5.notion.site/5fbfdba07f934915b54a98cb9a39603b"
+                target="_blank"
+              >
                 <img
                   src="imgs/projects/back1.webp"
                   alt="project3"
@@ -287,8 +301,8 @@
     <!-- Footer -->
     <footer id="contact" class="section">
       <!-- Contact -->
-      <div class="max--container">
-        <h2 class="title">Let&#39;s talk</h2>
+      <div class="contact__container max--container">
+        <h2 class="title contact__title">Let&#39;s talk</h2>
         <p class="description">yakima1019@gmail.com</p>
         <ul class="contact__links">
           <li>

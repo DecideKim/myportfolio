@@ -10,7 +10,7 @@ let activeNavItem = navItems[0];
 
 const options = {
   rootMargin: '-20% 0px 0px 0px',
-  threshold: [0, 0.98],
+  threshold: [0, 0.95],
 };
 const observer = new IntersectionObserver(observerCallback, options);
 sections.forEach((section) => observer.observe(section));
@@ -23,7 +23,7 @@ function observerCallback(entries) {
     selectLastOne =
       index === sectionIds.length - 1 &&
       entry.isIntersecting &&
-      entry.intersectionRatio >= 0.96;
+      entry.intersectionRatio >= 0.95;
   });
 
   const navIndex = selectLastOne
